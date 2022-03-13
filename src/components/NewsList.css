@@ -1,0 +1,93 @@
+.news__list {
+    margin-top: 7rem;
+}
+
+.news__list > h2 {
+    margin-bottom: .6rem;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-text h1 {
+    color: #b366f9;
+    font-size: 2.5rem;
+    margin-bottom: .4rem;
+}
+
+.header-text p {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+
+
+.input__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.input__form input {
+    width: 300px;
+    padding: .5rem 1rem;
+    font-size: 1.125rem;
+    outline: none;
+}
+
+.input__form button {
+    align-self: stretch;
+    background-color: #b366f9;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding-inline: 1rem;
+}
+
+
+.topics__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.topics__container h2 {
+    margin-bottom: .8rem;
+}
+
+
+.tabs__list {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tabs__list button {
+    padding: .5rem 1rem ;
+    cursor: pointer;
+}
+
+.articles__container {
+    /* width: 60%;
+    margin: 0 auto; */
+}
+
+.articles__container h2 {
+    margin-bottom: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+.error {
+    color: red;
+}
