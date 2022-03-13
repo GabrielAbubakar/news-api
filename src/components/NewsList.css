@@ -71,10 +71,9 @@
     cursor: pointer;
 }
 
-.articles__container {
-    /* width: 60%;
-    margin: 0 auto; */
-}
+/* .articles__container {
+
+} */
 
 .articles__container h2 {
     margin-bottom: .7rem;
