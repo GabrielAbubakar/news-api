@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import NewsItem from './NewsItem'
+import NewsItem from '../NewsItem/NewsItem'
 import './NewsList.css'
 
 const NewsList = () => {
