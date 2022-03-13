@@ -90,13 +90,15 @@ const NewsList = () => {
                         </div>
                     )}
                     <ul>
-                        {articles.map(article => (
+                        {articles.map((article, i) => (
 
                             <NewsItem title={article.title}
                                 key={article.title}
                                 publisher={article.author}
                                 content={article.description}
-                                link={article.url} />
+                                link={article.url}
+                                index={i}
+                            />
                         ))}
                     </ul>
                 </div>
