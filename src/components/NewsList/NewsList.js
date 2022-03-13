@@ -69,7 +69,7 @@ const NewsList = () => {
             </form>
 
             <div className="topics__container">
-                <h2>Hot Topics🔥🔥</h2>
+                <h2>Hot Trending Topics🔥🔥</h2>
                 <div className="tabs__list">
                     <button id='tech' onClick={buttonFetch} >Tech</button>
                     <button id='business' onClick={buttonFetch} >Business</button>
