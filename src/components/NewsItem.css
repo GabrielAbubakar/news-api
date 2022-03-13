@@ -22,12 +22,25 @@
 
 #publisher {
     font-weight: 600;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     color: rgb(184, 184, 184);
+    padding-bottom: .7rem;
+    margin-bottom: .7rem;
+    position: relative;
+}
+
+#publisher::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 10%;
+    background-color: #a3c6f9;
 }
 
 #content {
-    margin-bottom: 1rem;
+    margin-bottom: .7rem;
 }
 
 .news__item a {
