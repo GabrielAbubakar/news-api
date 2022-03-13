@@ -1,17 +1,19 @@
 import React from 'react'
+import './NewsItem.css'
 
-const NewsItem = () => {
+const NewsItem = ({ title, publisher, content, link }) => {
+
     return (
-        <div>
-            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-            <p>Verge Team</p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic velit veniam obcaecati! Optio doloribus repellat aperiam. Voluptates aut porro tempore harum. Molestiae tempore distinctio ea!
+        <div className='news__item'>
+            <h3>{title}</h3>
+            <p id='publisher'>{publisher}</p>
+            <p id='content'>
+                {content}
             </p>
-            <a href="">Read More</a>
+            <a href={link} target="_blank">Read More</a>
         </div>
     )
 }
 
 
-export default NewsItem
+export default NewsItem;

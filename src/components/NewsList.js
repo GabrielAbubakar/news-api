@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import NewsItem from './NewsItem'
 import './NewsList.css'
 
 const NewsList = () => {
@@ -25,6 +26,7 @@ const NewsList = () => {
             })
             .catch((error) => {
                 setErr(true)
+                setArticle([])
             });
     }
 
@@ -37,17 +39,9 @@ const NewsList = () => {
             })
             .catch((error) => {
                 setErr(true)
+                setArticle([])
             });
     }
-
-    // function ErrorHandler({ error }) {
-    //     return (
-    //         <div role="alert">
-    //             <p>An error occurred:</p>
-    //             <pre>{error.message}</pre>
-    //         </div>
-    //     )
-    // }
 
 
 
@@ -66,7 +60,11 @@ const NewsList = () => {
             </div>
 
             <form onSubmit={fetchData} className='input__form'>
-                <input placeholder='Input your search keyword here' type="text" label="Search User" value={input} onChange={e => setInput(e.target.value.toLowerCase())} />
+                <input placeholder='Input your search keyword here'
+                    type="text" label="Search User"
+                    value={input}
+                    onChange={e => setInput(e.target.value.toLowerCase())}
+                />
                 <button>Search</button>
             </form>
 
@@ -85,7 +83,7 @@ const NewsList = () => {
 
             {articles && (
                 <div className='articles__container'>
-                    <h2>Search/Top Results</h2>
+                    <h2>Search/Top Results:</h2>
                     {err && (
                         <div className='error'>
                             <p>An Error Occured (Please check your internet connection or retry your keyword)</p>
@@ -93,7 +91,12 @@ const NewsList = () => {
                     )}
                     <ul>
                         {articles.map(article => (
-                            <li key={article.title}>{article.title}</li>
+
+                            <NewsItem title={article.title}
+                                key={article.title}
+                                publisher={article.author}
+                                content={article.description}
+                                link={article.url} />
                         ))}
                     </ul>
                 </div>
@@ -103,4 +106,4 @@ const NewsList = () => {
 }
 
 
-export default NewsList
+export default NewsList;
